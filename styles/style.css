@@ -1,18 +1,19 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 p {
-    font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 26px auto 0 auto;
     border: 1px rgba(128, 128, 128, 0.5) solid;
-    border-radius:  2%;
+    border-radius: 2%;
     box-shadow: 0px 0px 100px 0px rgba(128, 128, 128, 0.5);
     width: 75%;
     max-width: 1000px;
@@ -20,16 +21,26 @@ p {
     padding: 24px;
     row-gap: 20px;
 }
-.city-current-temp{
+
+.city-current-temp {
     grid-column-start: 1;
     grid-column-end: span 2;
     font-size: 64px !important;
 }
+
 .weather-logo {
     grid-column-start: 1;
     grid-column-end: span 2;
 }
-.grid-container > p {
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+}
+
+.grid-container>p {
     text-align: center;
 }
 
